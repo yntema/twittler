@@ -8,22 +8,26 @@
     <div id="header">
       <h1>Welcome to Twittler</h1>
     </div>
-    <div id="main">
+    <div>
+      <button>New Tweets</button>
     </div>
+    <div id="main"></div>
     <script>
 
       $(document).ready(function(){
-        var $main = $('#main');
-        $main.html('');
+        $('body').on('click', 'button', function() {
+          var $main = $('#main');
+          $main.html('');
 
-        var index = streams.home.length - 1;
-        while(index >= 0){
-          var tweet = streams.home[index];
-          var $tweet = $('<div></div>');
-          $tweet.text('@' + tweet.user + ': ' + tweet.message);
-          $tweet.appendTo($main);
-          index -= 1;
-        }
+          var index = streams.home.length - 1;
+          while(index >= 0){
+            var tweet = streams.home[index];
+            var $tweet = $('<div></div>');
+            $tweet.text('@' + tweet.user + ': ' + tweet.message + tweet.created_at);
+            $tweet.appendTo($main);
+            index -= 1;
+          }
+        });
 
       });
 
