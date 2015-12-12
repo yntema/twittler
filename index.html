@@ -13,24 +13,35 @@
       <h1>Welcome to Twittler</h1>
     </div>
     <div>
-      <button>New Tweets</button>
+      <button id="new-tweet">New Tweets</button>
     </div>
     <div id="main"></div>
-    <script>
 
+    <script>
       $(document).ready(function(){
-        $('body').on('click', 'button', function() {
-          var $main = $('#main');
-          $main.html('');
+        function loadTweets() {
+          var main = $('#main');
+          main.html('');
 
           var index = streams.home.length - 1;
           while(index >= 0){
             var tweet = streams.home[index];
+            var user = tweet.user;
+            var message = tweet.message;
+            var time = tweet.created_at;
             var $tweet = $('<div class="tweet"></div>');
-            $tweet.text('@' + tweet.user + ': ' + tweet.message + tweet.created_at);
-            $tweet.appendTo($main);
+            $tweet.text('@' + user + ': ' + message + time);
+            $tweet.appendTo(main);
             index -= 1;
           }
+        };
+        loadTweets();
+        $('body').on('click', '#new-tweet', loadTweets);
+        $('body').on('mouseenter', '.tweet', function() {
+            $(this).toggleClass('highlighted');
+        });
+        $('body').on('mouseleave', '.tweet', function() {
+            $(this).toggleClass('highlighted');
         });
 
       });
