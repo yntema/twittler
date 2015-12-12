@@ -30,8 +30,16 @@
             var message = tweet.message;
             var time = tweet.created_at;
             var $tweet = $('<div class="tweet"></div>');
-            $tweet.text('@' + user + ': ' + message + time);
+            var $user = $('<h2 class="user"></h2>');
+            var $message = $('<p class="message"></p>');
+            var $time = $('<p class="time"></p>');
+            $user.text('@' + user);
+            $message.text(message);
+            $time.text(time);
             $tweet.appendTo(main);
+            $user.appendTo($tweet);
+            $message.appendTo($tweet);
+            $time.appendTo($tweet);
             index -= 1;
           }
         };
