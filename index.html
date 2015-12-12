@@ -44,6 +44,10 @@
           }
         };
         loadTweets();
+        $('.tweet').on('click', '.user', function() {
+            $(this).toggleClass('time');
+        });
+
         $('body').on('click', '#new-tweet', loadTweets);
         $('body').on('mouseenter', '.tweet', function() {
             $(this).toggleClass('highlighted');
