@@ -1,3 +1,29 @@
 body {
 	font-family: 'Lato', sans-serif;
+	color: #7f8c8d;
 }
+.tweet {
+	margin: 10px;
+	border: 2px solid #95a5a6;
+	padding: 20px;
+}
+button {
+  -webkit-border-radius: 4;
+  -moz-border-radius: 4;
+	display: block;
+	margin: 0 auto;
+	color: #fff;
+	font-size: 20px;
+	background: #3498db;
+	padding: 10px 30px;
+	border-radius: 4px;
+	border: 0;
+	text-decoration: none;
+}
+button:hover {
+	background: #2980b9;
+}
+button:active {
+	background: #2ecc71;
+}
+
