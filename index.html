@@ -53,7 +53,7 @@
         $('body').on('mouseleave', '.tweet', function() {
           $(this).toggleClass('highlighted');
         });
-        $('body').on('click', '.user', function() {
+        function loadUserTweets() {
           var main = $('#main');
           main.html('');
           var thisUser = $(this).text().slice(1);
@@ -76,7 +76,8 @@
             $time.appendTo($tweet);
             index -= 1;
           }
-        });
+        }
+        $('body').on('click', '.user', loadUserTweets);
 
       });
 
