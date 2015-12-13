@@ -63,7 +63,7 @@
           while(index >= 0){
             var tweet = tweets[index];
             var message = tweet.message;
-            var time = tweet.created_at;
+            var time = moment(tweet.created_at).fromNow();
             var $tweet = $('<div class="tweet"></div>');
             var $user = $('<h2 class="user"></h2>');
             var $message = $('<p class="message"></p>');
