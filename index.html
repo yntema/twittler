@@ -3,24 +3,39 @@
   <head>
     <meta charset="utf-8">
     <title>Twittler</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900,400italic,300italic' rel='stylesheet' type='text/css'>
     <script src="jquery.js"></script>
     <script src="data_generator.js"></script>
     <script src="http://momentjs.com/downloads/moment.min.js"></script>
   </head>
+
   <body>
-    <div id="header">
-      <h1>Welcome to Twittler</h1>
-    </div>
-    <div>
-      <button id="new-tweet">New Tweets</button>
-    </div>
-    <div class="form">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">
+            <h4>Twittler</h4>
+          </a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li><button id="new-tweet">New Tweets</button></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="col-md-10 col-md-offset-1">
         Username: <input type='text' name='username'><br>
         Message: <br><input type='text' name='message' maxlength='140' size='100'>
         <button id="write-tweet">Submit</button>
     </div>
-    <div id="main"></div>
+    <div id="main" class="col-md-10 col-md-offset-1"></div>
   </body>
 </html>
