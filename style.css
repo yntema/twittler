@@ -2,6 +2,9 @@ body {
 	font-family: 'Lato', sans-serif;
 	color: #7f8c8d;
 }
+.write-tweet {
+	padding-left: 50px;
+}
 #header {
 	margin-left: 50px;
 }
@@ -29,13 +32,15 @@ body {
 .highlighted {
 	background-color: #f9f9f9;
 }
-
+.form {
+	margin: 5px 100px;
+	border: 1px solid #95a5a6;
+	padding: 20px;
+}
 
 button {
   -webkit-border-radius: 4;
   -moz-border-radius: 4;
-	display: block;
-	margin: 0 auto;
 	color: #fff;
 	font-size: 20px;
 	background: #3498db;
@@ -43,6 +48,15 @@ button {
 	border-radius: 4px;
 	border: 0;
 	text-decoration: none;
+}
+button#new-tweet{
+	display: block;
+	margin: 0 auto;
+}
+button#write-tweet{
+	float: right;
+	position: relative;
+	top: -10px;
 }
 button:hover {
 	background: #2980b9;
