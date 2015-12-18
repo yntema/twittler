@@ -9,7 +9,7 @@ body {
 	margin-left: 50px;
 }
 .tweet {
-/*	margin: 5px 100px;*/
+  margin: 0 0 5px 0;
 	border: 1px solid #95a5a6;
 }
 .user {

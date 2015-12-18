@@ -63,6 +63,7 @@ $(document).ready(function(){
     main.html('');
 
     var index = streams.home.length - 1;
+    $('#total-tweets').html(index+1);
     while(index >= 0){
       var tweet = streams.home[index];
       var user = tweet.user;
@@ -85,7 +86,7 @@ $(document).ready(function(){
   loadTweets();
 
 
-  $('body').on('click', '#new-tweet', loadTweets);
+  $('body').on('click', '#load-tweets', loadTweets);
   $('body').on('mouseenter', '.tweet', function() {
     $(this).toggleClass('highlighted');
   });
