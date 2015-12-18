@@ -121,7 +121,7 @@ $(document).ready(function(){
 // (note: not used by the rest of this file.)
 var writeTweet = function(message){
   var visitor = $('input[name=username]').val();
-  var message = $('textarea[name=message]').val();
+  var message = $('input[name=message]').val();
   var time = new Date();
   if(!visitor){
     throw new Error('set the global visitor property!');
